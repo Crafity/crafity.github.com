@@ -1,0 +1,317 @@
+body {
+  font-size: 12pt;
+  text-align: center;
+  background: #1f1f1f url("./images/Beehive_background_small.jpg?v=1") repeat;
+  color: #a1a1a1;
+  font-family: sans-serif;
+  font-weight: normal;
+  cursor: default;
+  line-height: 1.5em;
+  word-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 14pt;
+  text-transform: uppercase;
+  text-shadow: #000 1px 1px 1px;
+  clear: both;
+  color: #fff;
+  width: 100%;
+  margin: 0px;
+  padding: 20px 0 10px 0;
+}
+h2.right {
+  text-align: right;
+}
+h3 {
+  font-size: 11pt;
+  margin: 0px;
+  padding: 10px 0 5px 0;
+  clear: none;
+  color: #9ab4cb;
+  text-transform: uppercase;
+  text-shadow: #000 1px 3px 1px;
+}
+h4 {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  font-weight: bold;
+  display: inline;
+}
+p {
+  margin: 0px;
+  padding: 0 0 10px 0;
+}
+strong {
+  font-weight: bold;
+}
+a img {
+  cursor: pointer;
+}
+a {
+  color: #7cb6e9;
+  cursor: pointer;
+  text-shadow: #000 1px 1px 1px;
+  text-decoration: none;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  -ms-transition: color 1s;
+  transition: color 1s;
+}
+.no-touch a:hover {
+  color: #e38418;
+  text-shadow: #000 1px 2px 1px;
+}
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+  list-style-image: none;
+  padding: 0 0 10px 0;
+  margin: 0px;
+  white-space: wrap;
+}
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  list-style-position: outside;
+  list-style-image: none;
+  background-image: url("./images/bullet.png?v=1");
+  background-repeat: no-repeat;
+  background-position: left 7px;
+  padding-left: 20px;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.link.goto-top {
+  text-transform: lowercase;
+  font-size: 0.9em;
+  font-weight: bold;
+  float: right;
+}
+.section-end {
+  visibility: hidden;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+a.link.external:before,
+a.link.mail:before,
+a.link.document:before,
+a.link.download:before {
+  position: relative;
+  display: inline-block;
+  font-family: dingbats;
+  color: #fff;
+  font-size: 14pt;
+  width: 18px;
+  letter-spacing: 5px;
+  height: 18px;
+  top: 2px;
+  margin-right: 10px;
+}
+a.link.mail:before {
+  content: "";
+  top: 4px;
+  background: url("/images/email.png?v=1") center center no-repeat;
+}
+a.link.document:before {
+  content: "\1F4C4";
+}
+a.link.external:before {
+  content: "";
+  background: url("/images/tab.png?v=1") center center no-repeat;
+}
+a.link.download:before {
+  content: "";
+  background: url("/images/download.png?v=1") center center no-repeat;
+}
+header {
+/* Attach the header to the full size of the browser */
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 180px;
+  -webkit-box-shadow: 0px 5px 35px 1px #101010;
+  box-shadow: 0px 5px 35px 1px #101010;
+/* Safari 4-5, Chrome 1-9 */
+/* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(rgba(200,200,200,0.4)), to(rgba(200,200,200,0)));
+/* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, rgba(150,150,150,0.5), rgba(150,150,150,0.1));
+/* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, rgba(200,200,200,0.4), rgba(200,200,200,0));
+/* IE 10 */
+  background: -ms-radial-gradient(circle, rgba(200,200,200,0.4), rgba(200,200,200,0));
+  background: radial-gradient(50% 50%, 80% 80%, rgba(200,200,200,0.4), rgba(200,200,200,0));
+/* Safari 4-5, Chrome 1-9 */
+/* Can't specify a percentage size? Laaaaaame. */
+/* Safari 5.1+, Chrome 10+ */
+/* Firefox 3.6+ */
+/* IE 10 */
+}
+.no-cssgradients header {
+  border-bottom: solid 4px #c0c0c0;
+}
+header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background: #505050 -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0,0,0,0.3)), color-stop(0.5, rgba(200,200,200,0.6)), color-stop(1, rgba(0,0,0,0.3)));
+  background: #505050 -webkit-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(200,200,200,0.6) 50%, rgba(0,0,0,0.3) 100%);
+  background: #505050 -moz-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(200,200,200,0.6) 50%, rgba(0,0,0,0.3) 100%);
+  background: #505050 -o-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(200,200,200,0.6) 50%, rgba(0,0,0,0.3) 100%);
+  background: #505050 -ms-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(200,200,200,0.6) 50%, rgba(0,0,0,0.3) 100%);
+  background: #505050 linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(200,200,200,0.6) 50%, rgba(0,0,0,0.3) 100%);
+  -webkit-box-shadow: 0 -1px 2px #fafafa, 0 2px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 -1px 2px #fafafa, 0 2px 1px rgba(0,0,0,0.5);
+}
+header .loader {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: 1px;
+  left: -100%;
+  z-index: 400;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.6, rgba(200,200,200,0)), color-stop(0.85, #fff), color-stop(0.95, #c8c8c8), color-stop(1, rgba(30,30,70,0)));
+  background: -webkit-linear-gradient(left, rgba(200,200,200,0) 60%, #fff 85%, #c8c8c8 95%, rgba(30,30,70,0) 100%);
+  background: -moz-linear-gradient(left, rgba(200,200,200,0) 60%, #fff 85%, #c8c8c8 95%, rgba(30,30,70,0) 100%);
+  background: -o-linear-gradient(left, rgba(200,200,200,0) 60%, #fff 85%, #c8c8c8 95%, rgba(30,30,70,0) 100%);
+  background: -ms-linear-gradient(left, rgba(200,200,200,0) 60%, #fff 85%, #c8c8c8 95%, rgba(30,30,70,0) 100%);
+  background: linear-gradient(left, rgba(200,200,200,0) 60%, #fff 85%, #c8c8c8 95%, rgba(30,30,70,0) 100%);
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+header .loader.done {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+}
+.loading header .loader {
+  z-index: 4000;
+  -webkit-animation-name: scroll-loader;
+  -moz-animation-name: scroll-loader;
+  -o-animation-name: scroll-loader;
+  -ms-animation-name: scroll-loader;
+  animation-name: scroll-loader;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forward;
+  -moz-animation-fill-mode: forward;
+  -o-animation-fill-mode: forward;
+  -ms-animation-fill-mode: forward;
+  animation-fill-mode: forward;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  animation-direction: normal;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+header #logo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header #logo:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: alpha(opacity=70);
+  z-index: 700;
+  background: #1f1f1f url("./images/Beehive_background_small.jpg?v=1") repeat;
+}
+header #logo a {
+  position: absolute;
+  display: block;
+  z-index: 2000;
+  margin: -114px auto;
+  height: 229px;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 481px) {
+  header {
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 0px;
+    min-height: 180px;
+    -webkit-transition: bottom 4s ease-out;
+    -moz-transition: bottom 4s ease-out;
+    -o-transition: bottom 4s ease-out;
+    -ms-transition: bottom 4s ease-out;
+    transition: bottom 4s ease-out;
+    z-index: 1000;
+  }
+  .up header {
+    bottom: 100%;
+  }
+  .down header {
+    bottom: 0%;
+  }
+  .hidden.down header {
+    -webkit-transition: bottom 0s;
+    -moz-transition: bottom 0s;
+    -o-transition: bottom 0s;
+    -ms-transition: bottom 0s;
+    transition: bottom 0s;
+    bottom: 0%;
+  }
+  header #logo {
+    min-height: 190px;
+    position: absolute;
+    pointer-events: all;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
