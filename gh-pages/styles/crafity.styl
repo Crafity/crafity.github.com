@@ -1,0 +1,319 @@
+@import reset
+@import css3
+@import "nib"
+
+body 
+	font-size:									12pt
+	text-align:									center
+	background:									#1f1f1f url('./images/Beehive_background_small.jpg?v=1') repeat
+	color:											#A1A1A1
+	font-family:								sans-serif //Helvetica, Consolas, courier
+	font-weight:								normal
+	cursor:											default
+	line-height:								1.5em
+	word-spacing:								0.1em
+	margin:											0
+	padding:										0
+
+h2 
+	font-size:								14pt
+	text-transform:						uppercase
+	text-shadow:							black 1px 1px 1px
+	clear:										both
+	color:										white
+	width:										100%
+	margin:										0px
+	padding:									20px 0 10px 0
+	&.right
+		text-align:							right
+
+h3 
+	font-size:								11pt
+	margin:										0px
+	padding:									10px 0 5px 0
+	clear:										none
+	color:										#9AB4CB
+	text-transform:						uppercase
+	text-shadow:							black 1px 3px 1px
+
+h4 
+	margin:										0px
+	padding:									0px
+	margin-top:								10px
+	font-weight:							bold
+	display:									inline
+
+p
+	margin:										0px
+	padding:									0 0 10px 0
+
+
+strong 
+	font-weight: bold
+
+a img 
+	cursor: pointer
+
+a 
+	color:								#7CB6E9
+	cursor:								pointer
+	text-shadow:					black 1px 1px 1px
+	text-decoration:			none
+	transition:						color 1s
+	.no-touch &:hover
+		color:							#E38418
+		text-shadow:				black 1px 2px 1px
+
+
+ul
+	list-style-type: none
+	list-style-position: outside
+	list-style-image: none
+	padding: 0 0 10px 0
+	margin: 0px
+	white-space: wrap
+
+
+li
+	margin: 0px
+	padding: 0px
+	list-style-type: none
+	list-style-position: outside
+	list-style-image: none
+	background-image: url('./images/bullet.png?v=1')
+	background-repeat: no-repeat;
+	background-position: left 7px;
+	padding-left: 20px;
+
+.right 
+	float: right
+
+.left 
+	float: left
+
+.link.goto-top 
+	text-transform: lowercase
+	font-size: .9em
+	font-weight: bold
+	float: right
+
+.section-end 
+	visibility: hidden
+	clear: both
+
+.hidden 
+	display: none
+
+a.link
+	&.external:before,
+	&.mail:before,
+	&.document:before,
+	&.download:before
+		position: relative
+		display: inline-block
+		font-family: dingbats
+		color: white
+		font-size: 14pt
+		width: 18px
+		letter-spacing: 5px
+		height: 18px
+		top: 2px
+		margin-right: 10px
+		//float: left
+
+	&.mail:before
+		content: ""
+		top: 4px
+		background: url('./images/email.png?v=1') center center no-repeat
+
+	&.document:before
+		content: "\1F4C4"
+
+	&.external:before
+		content: ""
+		background: url('./images/tab.png?v=1') center center no-repeat
+
+	&.download:before
+		content: ""
+		background: url('./images/download.png?v=1') center center no-repeat
+
+/***   G L O B A L   C L A S S E S   ***/
+.facts 
+	padding: 15px 50px 15px 50px
+	*
+		font-size: 0.92em
+		letter-spacing: 0.15em
+
+/***   D O C U M E N T   ***/
+
+ul.links
+	clear: both
+	overflow: hidden
+	padding-top: 10px
+	list-style-position: outside
+	li
+		clear: none
+		float: right
+		color: #444
+		padding-left: 20px
+		margin: 0 5px 0 0
+		text-transform: uppercase
+	&.internal
+		li
+			padding: 2px 5px 2px 20px 
+			//border: 1px solid gray
+			//border-radius: 5px
+			//-webkit-transform: skew(-10deg)
+			//background: #202020;
+			//min-width: 80px
+			//text-align: center
+			//box-shadow: 0 0 5px 0 rgba(30, 30, 30, .7)
+			//background-color : rgba(31,31,31,.6); //#1f1f1f;
+			//border : 1px solid rgb(100,97,113);
+			//border-top-color : rgb(70, 70, 70, .8);
+			//border-bottom-color : rgb(31,31,31);
+			//border-radius(6px)
+			//text-shadow: 0 -1px 1px rgba(0, 0, 0, .8); 
+			text-transform: capitalize
+			a
+				.no-touch &:hover
+					color:											#E38418
+
+		li:last-child()
+			color:													purple
+
+	&.external
+		top:															96px
+		right:														20px
+		position:													absolute
+		li
+			float:													none
+			text-transform:									capitalize
+			font-size:											1em
+			padding:												0 0 5px 0
+			background:											none
+			margin:													0
+	aside &.external
+		position:													relative
+		top:															auto
+		right:														auto
+
+.about
+	width:															555px
+	
+.picture
+	border-radius(5px)
+	
+/* People */
+.person
+	position:														relative
+	height:															260px
+	width:															230px
+	margin:															0 60px 0 60px
+	float:															left
+	overflow:														hidden
+	padding-bottom:											10px
+	a
+		h3
+			transition:											color 400ms ease-out
+			color:													#7CB6E9 // TODO rename to link-color
+			position:												absolute
+			top:														225px
+			width:													230px
+			text-align:											center
+		img
+			position:												absolute
+			top:														0
+			width:													230px
+			height:													228px
+			opacity:												.8
+			transition:											opacity 400ms ease-out
+		.no-touch &:hover
+			h3
+				color:												#E38418 // rename to lonk-hover-color
+			img
+				opacity:											1
+
+		
+.tagline 
+	margin-top:													20px
+	color:															gray
+
+.smaller 
+	font-size:													.8em
+
+.link.list 
+	padding-top:												20px
+
+.link.list a 
+	text-decoration:										underline
+
+.bullet
+	background:													url('/images/bullet.png?v=1')
+	display:														inline-block
+	width:															11px
+	height:															11px
+	margin:															0 20px 0 20px
+
+  
+.images
+	position:																	relative
+	text-align: center
+	margin: 																			40px 0 50px 0
+	perspective:													1000
+	-moz-transform: 											unquote('perspective(1000px)')
+	-moz-transform-style: 								preserve-3d
+	perspective-origin:										center center
+	.image
+		min-width: 																	0
+		display: 																		inline-block
+		position: 																	relative
+		//box-shadow:																-5px 5px 15px black
+		//height: 																	100%
+		//perspective:																1000
+		perspective-origin:													center center
+		transform: 																	rotateY(45deg)
+		//transform-style:														preserve-3d
+		transition-property:												transform, -webkit-transform, -moz-transform, -o-transform, -ms-transform
+		transition-duration:												.75s
+		timing-function:														ease-in-out
+		transform-origin:														50% 0
+		img
+			position:																	relative
+			border:																		10px solid black
+			box-shadow:																-5px 5px 15px black //rgba(0, 0, 0, .25)
+			z-index: 100
+			//-webkit-transform:												rotateY(15deg)
+			//-webkit-transform-style:									preserve-3d;
+			//-webkit-transition-property:							webkit-transform
+			//-webkit-transition-duration:							.75s
+			//-webkit-timing-function:									ease-in-out
+			//-webkit-transform-origin:									50% 0
+		.caption
+			position:																	absolute
+			font-size:																80%
+			background-color:													rgba(0,0,0,.7)
+			box-shadow:																-20px 20px 30px rgba(0,0,0,.6)
+			bottom:																		25px
+			padding:																	10px
+			width:																		120px
+			text-align:																center
+			transition-property:												transform, -webkit-transform, -moz-transform, -o-transform, -ms-transform
+			transition-duration:												.75s
+			transform:																translate(40px, 0)
+			-moz-transform:															translate(0px, 0)
+			z-index: 1000
+			display:	block;
+		.no-touch &:hover
+			transform:																rotateY(0)
+			.caption
+				//left: 																	-60px
+				//background-color:												rgba(0,0,0,.8)
+				transform:																translate(-60px, 0)
+				//-moz-transform:															translate(0px, 0)
+				//display:	block
+		
+@import layout
+@import header
+@import section
+@import github

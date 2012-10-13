@@ -1,0 +1,106 @@
+@import css3
+@import "nib"
+
+#container
+	section
+		position: relative
+		overflow: hidden
+		margin: 0 0 20px 0
+		padding: 25px 10px 10px 10px
+		opacity: 0
+		border-radius: 25px
+		transform-origin(335px, 50px)
+		transition: opacity 4000ms ease-out
+		box-shadow: 0 -2px 5px rgb(255,255,255,1), 0 2px 1px rgba(0,0,0,.5);
+		animation: initial;
+		
+		.no-touch.cssanimations &
+			rotate-transform(0.6deg)
+		.no-rgba &
+			background: #1f1f1f //url('/images/50gray.gif') repeat
+		    border: 5px solid #444//#646171;
+		.rgba &
+			background-color: rgba(50, 50, 50, .5)
+			border: 5px solid rgba(80,80,80,.8);//#646171;
+		.cssgradients &
+			background: rgba(50, 50, 50, .3) linear-gradient(top, rgba(50, 50, 50, .5), 100% rgba(50, 50, 50, .8))
+			//background: linear-gradient(top, rgba(255,255,255,.3), 30% rgba(255,255,255,.1), 80% rgba(50,50,50,.3))
+			background-size: 100% 100%;
+			
+		&#menu
+			//opacity: 1
+			padding-top: 45px
+			padding-bottom: 30px
+		//.no-touch &#menu
+		//	animation: show-section 1500ms 100ms ease-in-out normal 1 forwards
+			
+		&.visible
+			//transition(4000ms, ease-out)
+			opacity: 1
+		.no-touch.cssanimations .up &
+			&.animate
+				rotate-transform(0.6deg)
+				animation: show-section 1500ms 100ms ease-in-out normal 1 forwards
+			&.dont-animate
+				rotate-transform(0deg) !important
+		&.loading
+			transition: opacity 400ms ease-out
+			//padding:0 0 0 1000px;
+			//rotate-transform(90deg)
+			opacity: .0
+
+		h2
+			line-height: 50px
+			width:610px;
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				right: 20px
+				top: 5px
+				width: 80px
+				height: 80px
+				opacity: .2
+			&.about:after
+				background: url("./images/about-icon.png?v=1") right top no-repeat
+			&.knowledge:after
+				background: url("./images/knowledge-icon.png?v=1") right top no-repeat
+			&.hire:after
+				background: url("./images/hire-icon.png?v=1") right top no-repeat
+
+@media (min-width: 481px)
+		#container
+			section
+				position: relative
+				width: 700px
+				margin: 0 auto 20px
+				padding: 25px 20px 10px 20px
+				overflow: hidden
+
+@keyframes show-section
+	from
+		rotate-transform(.6deg)
+	35%
+		rotate-transform(-.5deg)
+	60%
+		rotate-transform(.4deg)
+	75%
+		rotate-transform(-.3deg)
+	to
+		rotate-transform(.0deg)
+
+.close.command
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: -25px
+	background: url("./images/close-button-normal.png?v=3") center center no-repeat
+	width:51px
+	height:51px
+	text-indent: -9999px
+	z-index:100
+	.no-touch &:hover
+		background: url("./images/close-button-hover.png?v=3") center center no-repeat
+	&.disabled,
+	.no-touch &.disabled:hover
+		background: url("./images/close-disabled.png?v=1")
