@@ -1,0 +1,148 @@
+@media (max-device-width: 480px) {
+  body {
+    min-width: 200px;
+    width: 288px;
+    padding: 0 1em 0 1em;
+  }
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+  body {
+    min-width: 200px;
+    width: 448px;
+  }
+}
+@media (min-width: 481px) {
+  body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .touch body {
+    width: 95%;
+  }
+}
+@media (min-width: 681px) {
+  body {
+    position: absolute;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    position: absolute;
+  }
+}
+#main {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  overflow: auto;
+}
+@media (min-width: 481px) {
+  #main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -25px;
+    overflow-y: scroll;
+    display: block !important;
+/* Top Fader */
+/* Bottom Fader */
+  }
+  #main:before {
+    display: block;
+    content: "";
+    background: linear-gradient(bottom, rgba(30,30,30,0), 100% #000);
+    z-index: 800;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  #main:after {
+    display: block;
+    content: "";
+    background: linear-gradient(top, rgba(30,30,30,0), 100% #000);
+    z-index: 800;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+@media (min-width: 481px) {
+  .columns {
+    position: relative;
+    clear: both;
+  }
+  .columns .column1 {
+    position: relative;
+    margin: 0 2% 0 0;
+    width: 48%;
+    float: left;
+  }
+  .columns .column2 {
+    position: relative;
+    margin: 0 0 0 2%;
+    width: 48%;
+    float: left;
+  }
+  .columns.reverse .column1 {
+    margin: 0 0 0 2%;
+    width: 48%;
+    float: right;
+  }
+  .columns.reverse .column2 {
+    margin: 0 2% 0 0;
+    width: 48%;
+    float: right;
+  }
+}
+#container {
+  position: relative;
+  margin: 0;
+  opacity: 1;
+}
+.down #container {
+  transition: opacity 400ms ease-out;
+  opacity: 0;
+}
+.up #container {
+  transition: opacity 400ms ease-out;
+  opacity: 1;
+}
+@media (min-width: 481px) {
+  #container {
+    margin: 0 auto;
+    padding: 210px 0 30px 0;
+    overflow: hidden;
+    min-height: 100%;
+  }
+}
+@media (min-width: 481px) {
+  aside {
+    float: left;
+    padding-right: 15px;
+  }
+}
+.container {
+  background-color: #000;
+  zoom: 1;
+  border: 2px solid #333;
+}
+@media (min-width: 481px) {
+  .container {
+    margin: 0 auto;
+    width: 640px;
+    height: 480px;
+  }
+}
