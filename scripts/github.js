@@ -1,5 +1,4 @@
 $(function () {
-//		url: 'http://raw.github.com/Crafity/crafity-storage/master/README.md',
 
 	var template = $(".repository.template").clone().removeClass('template hidden').get(0).outerHTML
 		, html$ = $("body")
