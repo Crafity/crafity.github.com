@@ -43,9 +43,13 @@ body
 										a.link.external(href="https://npmjs.org/package/{{name}}", target="_blank") NPM
 							article.knowledge
 								p {{description}}
-								div watchers_count: {{watchers_count}}
-								div open_issues_count: {{open_issues_count}}
-								div updated_at: {{updated_at}}
+								div Updated at: {{updated_at}}
+								div(style="{{show_fork}}") Forked
+								div Repo size: 
+									span.size {{size}}
+									span KB
+								div Watchers: {{watchers_count}}
+								div Open Issues: {{open_issues_count}}
 								div.readme.hidden
 									a.show.readme(href="#") Readme
 									div.content.hidden {{readme}}
