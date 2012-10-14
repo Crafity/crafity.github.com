@@ -1,11 +1,12 @@
 @import reset
 @import css3
-@import "nib"
+@import nib
+@import images
 
 body 
 	font-size:									12pt
 	text-align:									center
-	background:									#1f1f1f url('./images/Beehive_background_small.jpg?v=1') repeat
+	background:									#1f1f1f url('../images/Beehive_background_small.jpg?v=1') repeat
 	color:											#A1A1A1
 	font-family:								sans-serif //Helvetica, Consolas, courier
 	font-weight:								normal
@@ -80,10 +81,13 @@ li
 	list-style-type: none
 	list-style-position: outside
 	list-style-image: none
-	background-image: url('./images/bullet.png?v=1')
-	background-repeat: no-repeat;
-	background-position: left 7px;
-	padding-left: 20px;
+	@extend .sprite-images-bullet
+	//background-image: url('./images/bullet.png?v=1')
+	//background-repeat: no-repeat;
+	//background-position: left 7px;
+	width: inherit
+	height: inherit
+	padding-left: 20px
 
 .right 
 	float: right
@@ -124,14 +128,16 @@ a.link
 	&.mail:before
 		content: ""
 		top: 4px
-		background: url('./images/email.png?v=1') center center no-repeat
+		@extend .sprite-images-email
+		//background: url('./images/email.png?v=1') center center no-repeat
 
 	&.document:before
 		content: "\1F4C4"
 
 	&.external:before
 		content: ""
-		background: url('./images/tab.png?v=1') center center no-repeat
+		@extend .sprite-images-tab
+		//background: url('./images/tab.png?v=1') center center no-repeat
 
 	&.download:before
 		content: ""

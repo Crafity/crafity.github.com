@@ -1,12 +1,12 @@
 $(function () {
-//		url: 'http://raw.github.com/Crafity/crafity-storage/master/README.md',
 
 	var template = $(".repository.template").clone().removeClass('template hidden').get(0).outerHTML
 		, html$ = $("body")
 		, section = $("section .repositories")
 		, loadingMessage = section.find('.loading.message')
-		, loadingCount = 0;
-
+		, loadingCount = 0
+		, markdown = new Showdown.converter();
+	
 	getUserInfo(Gh3, "Crafity");
 	section.delegate("a.show.readme", "click", function () {
 		$(this).next(".content").toggleClass("hidden");
@@ -73,9 +73,8 @@ $(function () {
 			.replace(/{{watchers_count}}/gmi, repo.watchers_count)
 			.replace(/{{open_issues_count}}/gmi, repo.open_issues_count)
 			.replace(/{{updated_at}}/gmi, repo.updated_at)
-			.replace(/{{readme}}/gmi, markdown.toHTML(readme, "Maruku"))
-			.replace(/readme hidden/gmi, "readme " + (readme ? "" : "hidden"))
-			.replace(/&amp;nbsp;/gmi, "&nbsp;" + (readme ? "" : "hidden"));
+			.replace(/{{readme}}/gmi, markdown.makeHtml(readme))
+			.replace(/readme hidden/gmi, "readme " + (readme ? "" : "hidden"));
 		section.append(instance);
 	}
 });

@@ -17,24 +17,20 @@ html.no-js.not-ready.no-touch(lang="en")
 		meta(name="description", content="Crafity and Open Source. Overview of Crafity's projects on Github/")
 		meta(name="viewport", content="width=device-width,initial-scale=1,minimum-scale=1.0, maximum-scale=1.0")
 		title Open Source @ Crafity
-		script(src="./scripts/modernizr-latest.js?v=1")
-		link(href="crafity.css", rel="stylesheet", type="text/cs")
+		script(src="./scripts/modernizr-latest.js")
+		link(href="./styles/crafity.css?v=999", rel="stylesheet", type="text/cs")
 body
 	div#main.up
 		header#header
 			h1#logo
-				a.link.middle(href="/", alt="Crafity - Built with Passion")
-					img(src="./images/Logo_transparent_enhanced.png?v=1", alt="Crafity - Built with Passion")
+				a.link.middle(href="/", alt="Crafity - Built with Passion") Crafity - Built with Passion
 			div.loader
 		div#container
 			section.visible.dont-animate
 				.body
 					.disabled.close.command
 					h2.knowledge Open Source Node Modules by Crafity
-					p.
-						The following node modules have been developed and open sourced by 
-						Crafity. These modules have been developed while building 'real life' 
-						applications. Click on a module to get more information.
+					p The following node modules have been developed and open sourced by Crafity. These modules have been developed while building 'real life' applications. Click on a module to get more information.
 					.repositories
 						h3.loading.message Loading repositories...
 						.repository.template.hidden
@@ -42,9 +38,9 @@ body
 							aside.right
 								ul.links.external
 									li
-										a.link.external(href="https://github.com/Crafity/{{name}}") Github
+										a.link.external(href="https://github.com/Crafity/{{name}}", target="_blank") Github
 									li
-										a.link.external(href="https://npmjs.org/package/{{name}}") NPM
+										a.link.external(href="https://npmjs.org/package/{{name}}", target="_blank") NPM
 							article.knowledge
 								p {{description}}
 								div watchers_count: {{watchers_count}}
@@ -53,8 +49,4 @@ body
 								div.readme.hidden
 									a.show.readme(href="#") Readme
 									div.content.hidden {{readme}}
-	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
-	script(src="https://raw.github.com/k33g/gh3/master/gh3.js")
-	script(src="https://raw.github.com/evilstreak/markdown-js/master/lib/markdown.js")
-	script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.1/underscore-min.js")
-	script(src="./scripts/github.js")
+	script(src="./scripts/crafity-min.js?v=999")

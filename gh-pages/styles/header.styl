@@ -87,6 +87,12 @@ header
 		opacity: 1
 
 	#logo
+		a
+			@extend .sprite-images-Logo_transparent_enhanced
+			background-repeat: no-repeat
+			text-indent: -9999px
+			height: 217px !important
+			bottom: initial
 		margin: 0
 		padding: 0
 		text-align: center
@@ -99,7 +105,7 @@ header
 			height: 100%
 			opacity: .7
 			z-index: 700
-			background: #1f1f1f url('./images/Beehive_background_small.jpg?v=1') repeat
+			background: #1f1f1f url('../images/Beehive_background_small.jpg?v=1') repeat
 		a
 			position: absolute
 			display: block

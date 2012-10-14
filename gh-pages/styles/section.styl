@@ -64,7 +64,8 @@
 			&.about:after
 				background: url("./images/about-icon.png?v=1") right top no-repeat
 			&.knowledge:after
-				background: url("./images/knowledge-icon.png?v=1") right top no-repeat
+				@extend .sprite-images-knowledge-icon
+				//background: url("./images/knowledge-icon.png?v=1") right top no-repeat
 			&.hire:after
 				background: url("./images/hire-icon.png?v=1") right top no-repeat
 
@@ -94,13 +95,16 @@
 	top: 0
 	left: 50%
 	margin-left: -25px
-	background: url("./images/close-button-normal.png?v=3") center center no-repeat
+	@extend .sprite-images-close-button-normal
+	//background: url("./images/close-button-normal.png?v=3") center center no-repeat
 	width:51px
 	height:51px
 	text-indent: -9999px
 	z-index:100
 	.no-touch &:hover
-		background: url("./images/close-button-hover.png?v=3") center center no-repeat
+		@extend .sprite-images-close-button-hover
+		//background: url("./images/close-button-hover.png?v=3") center center no-repeat
 	&.disabled,
 	.no-touch &.disabled:hover
-		background: url("./images/close-disabled.png?v=1")
+		@extend .sprite-images-close-disabled
+		//background: url("./images/close-disabled.png?v=1")
